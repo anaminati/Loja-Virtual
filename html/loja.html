@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style-loja.css">
+	<title>Paper Dreams</title>
+	<link rel="icon" type="image/png" href="../img/icon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=DM+Serif+Text&family=Outfit:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body style="display: flex; flex-direction: column;">
+
+	<header class="header-01">
+		<div class="center">
+
+			<!-- Logo -->
+
+			<div class="logo"><img src="../img/logo.png"></div>
+
+			<!-- Menu -->
+
+			<div class="menu-01">
+				<a href="index.html">Home</a>
+				<a href="login.html">Loja</a>
+				<a href="contato.html">Contato</a>
+				<a href="ajuda.html">Ajuda</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- Loja -->
+
+	<h1 class="sobre" style="margin-bottom: 20px;">Loja</h1>
+	<header class="header-02">
+
+    <!-- Menu com ícone e quantidade de itens -->
+
+	    <div class="menu-abrir">
+	      	<span>0</span>
+	      	<span class="material-icons">shopping_cart</span>
+	    </div>
+  	</header>
+
+  	<!-- Conteúdo da loja -->
+
+  	<main>
+	   	<div class="produtos-area"></div>
+  	</main>
+
+  	<!-- Área do carrinho -->
+
+  	<aside>
+    	<div class="carrinho-area">
+	      	<div class="menu-fechar">
+	        	<span class="material-icons">close</span>
+	      	</div>
+	      	<h2>Seus produtos</h2>
+	      	<div class="carrinho"></div>
+	      	<div class="carrinho-detalhes" style="font-family: 'Lato', normal; text-transform: uppercase;">
+		        <div class="carrinho-valor subtotal">
+		          	<span>Subtotal</span>
+		          	<span class="carrinho-valor-subtotal">R$ --</span>
+		        </div>
+		        <div class="carrinho-valor frete">
+		          	<span>Frete</span>
+		          	<span class="carrinho-valor-frete">R$ --</span>
+		        </div>
+		        <div class="carrinho-valor pagamento">
+		          	<span>Pagamento</span>
+					<input type="radio" name="pagamento" id="cartao" onclick=Carrinho.update()>
+					<label for="cartao">Cartão</label>
+					<input type="radio" name="pagamento" id="boleto" onclick=Carrinho.update()>
+					<label for="boleto">Boleto</label>
+		        </div>
+		        <div class="carrinho-valor parcelas">
+		        	<span>Parcelamento</span>
+		            <input type="radio" name="parcelas" id="parcelaUma" onclick=Carrinho.update()>
+		            <label for="parcelaUma">1X de <span class="parcelaUma">R$ --</span></label>
+		            <input type="radio" name="parcelas" id="parcelaDuas" onclick=Carrinho.update()>
+		            <label for="parcelaDuas">2X de <span class="parcelaDuas">R$ --</span></label>
+		            <input type="radio" name="parcelas" id="parcelaTres" onclick=Carrinho.update()>
+		            <label for="parcelaTres">3X de <span class="parcelaTres">R$ --</span></label>
+		            <input type="radio" name="parcelas" id="parcelaQuatro" onclick=Carrinho.update()>
+		            <label for="parcelaQuatro">4X de <span class="parcelaQuatro">R$ --</span></label>
+		            <input type="radio" name="parcelas" id="parcelaCinco" onclick=Carrinho.update()>
+		            <label for="parcelaCinco">5X de <span class="parcelaCinco">R$ --</span></label>
+		        </div>
+		        <div class="carrinho-valor infocartao">
+		        	<span style="margin-left: -70%;">Informações do cartão</span>
+		        	<label>
+						<p> Número do cartão </p>
+						<br>
+						<input type = "number" name = "num" style="width: 300px;" minlength="14" maxlength="16" />
+					</label>
+					<label>
+						<p> Nome do titular </p>
+						<br>
+						<input type = "text" name = "nome" style = "text-transform: uppercase; width: 300px;" minlength="3"/>
+					</label>
+					<div style="display: flex; flex-direction: row;">
+						<label style="margin-right: 90px;">
+							<p> Vencimento: </p>
+							<br>
+							<input type = "month" name = "Vencimento" min = "2022-01"/>
+						</label>
+						<label>
+							<p style="text-align: right;"> CVV </p>
+							<br>
+							<input type = "number" name = "cvv" style = "-webkit-text-security: disc; width: 50px;" maxlength="3"/>
+						</label>
+					</div>
+		        </div>
+		        <div class="carrinho-valor desconto">
+		          	<span>Desconto</span>
+		          	<span class="carrinho-valor-desconto">R$ --</span>
+		        </div>
+		        <div class="carrinho-valor total big">
+		          	<span>Total</span>
+		          	<span class="carrinho-valor-total">R$ --</span>
+		        </div>
+	        	<div class="carrinho-finalizar">Finalizar a compra</div>
+	      	</div>
+    	</div>
+  	</aside>
+
+  	<!-- Janela com informações sobre o produto -->
+
+	<div class="produtos-janela">
+	    <div class="produtos-janela-conteudo">
+	      	<div class="produtos-info-cancelar" onclick=Janela.fechar()>
+	        	Voltar
+	      	</div>
+	      	<img class="produtos-janela-img" src="">
+	      	<div class="produtos-info">
+	        	<h2>--</h2>
+		        <div class="produtos-info-descricao">--</div>
+		        <div class="produtos-info-embalagem-area">
+		          	<div class="produtos-info-sector">Embalagem</div>
+		          	<div class="produtos-info-embalagens">
+			        	<div data-key="0" class="produtos-info-embalagem selected">Normal <span>--</span></div>
+			            <div data-key="1" class="produtos-info-embalagem">Presente <span>--</span></div>
+			            <div data-key="2" class="produtos-info-embalagem">Presente + Brinde <span>--</span></div>
+		          	</div>
+	        	</div>
+	        	<div class="produtos-info-preco-area">
+	          		<div class="produtos-info-sector">Preço</div>
+	          		<div class="produtos-info-preco">
+	            		<div class="produtos-info-preco-atual">R$ --</div>
+	            		<div class="produtos-info-quantidade-area">
+		              		<button class="produtos-info-quantidade-menos">-</button>
+		              		<div class="produtos-info-quantidade">1</div>
+		              		<button class="produtos-info-quantidade-mais">+</button>
+	            		</div>
+	          		</div>
+	        	</div>
+		        <div class="produtos-info-add-button">Adicionar ao carrinho</div>
+		        <div class="produtos-info-cancelar-button" onclick=Janela.fechar()>
+		          	Cancelar
+		        </div>
+	      	</div>
+	    </div>
+	</div>
+	<script src="../js/script.js"></script>
+</body>
+</html>

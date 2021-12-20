@@ -1,0 +1,296 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+body {
+	height: 100%;
+	overflow-x: hidden;
+	background-image: url('../img/background.png');
+}
+
+.center {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2%;
+}
+
+.logo {
+	width: 50%;
+}
+
+.logo img {
+	width: 150px;
+	height: auto;
+}
+
+.header-01 {
+	padding: 20px 0;
+	height: 200px;
+}
+
+.menu-01 {
+	margin-top: 60px;
+	width: 50%;
+	text-align: right;
+}
+
+.menu-01 a {
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	margin-right: 30px;
+}
+
+.menu-01 a:hover {
+	text-transform: uppercase;
+	font-weight: bolder;
+	color: #BDC1FA;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.sobre {
+	height: calc(100% - 200px);
+	position: relative;
+}
+
+.extras {
+	position: absolute;
+	bottom: -580px;
+	right: -300px;
+	width: 800px;
+	height: 800px;
+	border-radius: 50%;
+}
+
+.img1{
+	margin-top: -150px;
+	margin-left: -70px;
+}
+
+.img1 img {
+	width: 500px;
+	height: auto;
+}
+
+.img2 {
+	width: 150px;
+	height: auto;
+	margin-left: 250px;
+	margin-top: 70px;
+}
+
+.redes-sociais {
+	position: absolute;
+	right: 330px;
+	margin-top: 10px;
+}
+
+.redes-sociais img {
+	display: block;
+	width: 30px;
+	height: auto;
+	margin: 20px 0;
+}
+
+.texto-sobre p {
+	margin: 20px 0;
+	color: #000000;
+	text-align: justify;
+}
+
+section .center {
+	background-color: #FFFFFF;
+	margin-right: 700px;
+	margin-left: 30px;
+	padding: 10px;
+	border-radius: 20px;
+	border: 5px dotted #BDC1FA;
+}
+
+.saiba-mais {
+	box-shadow: 0px 0px 10px -7px #000000;
+	background: linear-gradient(to bottom, #BDC1FA 5%, #888FF2 100%);
+	background-color: #BDC1FA;
+	border: 1px solid #BDC1FA;
+	border-radius: 13px;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	padding: 15px 40px;
+	text-decoration: none;
+	text-shadow: 0px 0px 3px #000000;
+	font-family: 'Outfit', normal;
+}
+
+.saiba-mais:hover {
+	background: linear-gradient(to bottom, #888FF2 5%, #BDC1FA 100%);
+	background-color: #888FF2;
+}
+
+h1.sobre {
+	text-align: center;
+	font-family: 'DM Serif Text', serif;
+	color: #CD4D66;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.subtitulo {
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+	font-family: 'Outfit', normal;
+}
+
+#subtitulo {
+	text-align: center; 
+	margin-top: 50px; 
+	font-size: 20px; 
+	font-family: 'Outfit', normal;
+}
+
+h3 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+h4 {
+	margin-bottom: 50px;
+}
+
+.escrita {
+	text-align: justify;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-bottom: 50px;
+}
+
+ol {
+	list-style-type: circle;
+	margin-left: 150px;
+}
+
+table {
+	margin-left: 35%;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+tr td {
+	padding: 15px;
+}
+
+section.section {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+	border: 5px dotted #CD4D66;
+	margin: 50px;
+	padding: 10px;
+}
+
+.icones {
+	width: 25px;
+	height: auto;
+}
+
+.tela {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+    align-self: bottom;
+    margin: 50px;
+    margin-left: 425px;
+    width: 500px;
+	padding: 35px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+	border: 5px dotted #CD4D66;
+}
+
+.tela label {
+	display: block;
+	margin-bottom: 30px;
+	text-align: justify;
+}
+
+.tela input {
+	width: 300px;
+	border: 1px solid #CD4D66;
+	border-radius: 10px;
+	padding: 8px;
+	font-size: 14px;
+	outline: 0;
+	margin-top: 30px;
+}
+
+.error {
+	font-size: 15px;
+	background-color: #F2107B;
+	color: #FFFFFF;
+	padding: 30px
+	border-radius: 10px;
+	text-align: center;
+	padding: 6px;
+	margin-top: 5px;
+}
+
+.cadastro {
+	background-color: #CD4D66;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+.cadastro:hover {
+	cursor: pointer;
+}
+
+#sucesso {
+	border-bottom: 0;
+	margin-bottom: 0;
+	font-family: 'Outfit', normal;
+}
+
+#dir {
+	font-size: 20px;
+	font-family: 'Outfit', normal;
+	margin-top: 20px
+}
+
+label a{
+	text-decoration: none;
+	color: #000000;
+	text-decoration: underline;
+}
+
+label a:hover{
+	color: #000000;
+	cursor: pointer;
+}
+
+#timer {
+	margin-top: 30px;
+	font-size: 50pt;
+	color: #CD4D66;
+	font-weight: bold;
+	font-family: 'DM Serif Text', serif;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+#div-timer {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.img {
+	height: 300px;
+	width: auto;
+	margin-bottom: 30px;
+}

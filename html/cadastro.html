@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>Paper Dreams</title>
+	<link rel="icon" type="image/png" href="../img/icon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=DM+Serif+Text&family=Outfit:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+	<header class="header-01">
+		<div class="center">
+
+			<!-- Logo -->
+
+			<div class="logo"><img src="../img/logo.png"></div>
+
+			<!-- Menu -->
+
+			<div class="menu-01">
+				<a href="index.html">Home</a>
+				<a href="login.html">Loja</a>
+				<a href="contato.html">Contato</a>
+				<a href="ajuda.html">Ajuda</a>
+			</div>
+		</div>
+	</header>
+
+	<h1 class="sobre">Cadastro</h1>
+
+	<!-- Cadastro -->
+
+	<p id="subtitulo">Cadastre-se!</p>
+
+	<div class = "tela">	
+		<form method = "POST" action = "sucesso.html" class = "validador">
+			<label>
+				<p> Nome completo: </p>
+				<input type = "text" name = "nome" data-regras = "requerido|min=2"/>
+			</label>
+			<br>
+			<label>
+				<p> Seu e-mail: </p>
+			<input type = "text" name = "e-mail" data-regras = "requerido|email"/>
+			</label>
+			<br>
+			<label>
+				<p> Data de nascimento: </p>
+				<input type = "date" name = "data" data-regras = "requerido" min = "1900-01-01" max = "2005-01-01"/>
+			</label>
+			<br>
+			<br>
+			<label>
+				<p> Número de telefone: </p>
+				<input type = "number" name = "telefone" data-regras = "requerido|min=11"/>
+			</label>
+			<br>
+			<label>
+				<p> Endereço: </p>
+				<input type = "text" name = "endereco" data-regras = "requerido|min=3"/>
+			</label>
+			<br>
+			<label>
+				<p> Número da casa: </p>
+				<input type = "number" name = "numero" data-regras = "requerido|min=1"/>
+			</label>
+			<br>
+
+			<label>
+				<p> Cidade: </p>
+				<input type = "text" name = "cidade" data-regras = "requerido|min=3"/>
+			</label>
+			<br>
+			<label>
+				<p> Estado: </p>
+				<input list="estado" data-regras="requerido"/>
+            </label>
+            <datalist id="estado">
+                <option value="Acre (AC)"></option>
+                <option value="Alagoas (AL)"></option>
+                <option value="Amapá (AP)"></option>
+                <option value="Amazonas (AM)"></option>
+                <option value="Bahia (BA)"></option>
+                <option value="Ceará (CE)"></option>
+                <option value="Distrito Federal (DF)"></option>
+                <option value="Espírito Santo (ES)"></option>
+                <option value="Goiás (GO)"></option>
+                <option value="Maranhão (MA)"></option>
+                <option value="Mato Grosso (MT)"></option>
+                <option value="Mato Grosso do Sul (MS)"></option>
+                <option value="Minas Gerais (MG)"></option>
+                <option value="Pará (PA)"></option>
+                <option value="Paraíba (PB)"></option>
+                <option value="Paraná (PR)"></option>
+                <option value="Pernambuco (PE)"></option>
+                <option value="Piauí (PI)"></option>
+                <option value="Rio de Janeiro (RJ)"></option>
+                <option value="Rio Grande do Norte (RN)"></option>
+                <option value="Rio Grande do Sul (RS)"></option>
+                <option value="Rondônia (RO)"></option>
+                <option value="Roraima (RR)"></option>
+                <option value="Santa Catarina (SC)"></option>
+                <option value="São Paulo (SP)"></option>
+                <option value="Sergipe (SE)"></option>
+                <option value="Tocantins (TO)"></option>
+            </datalist>
+			<br>
+			<label>
+				<p> CEP: </p>
+				<input type = "number" name = "cep" data-regras = "requerido|min=8"/>
+			</label>
+			<br>
+			<label>
+				<p> Sua senha: </p>
+				<input type = "password" name = "senha" data-regras = "requerido|min=6" id = "senha"/>
+			</label>
+			<br>
+			<label>
+				<p> Confirme sua senha: </p>
+				<input type = "password" name = "senha" data-regras = "requerido|igualdade"/>
+			</label>
+			<br>
+			<label>
+                <p> Sobre os Termos e Condições de Uso do site: </p>
+                <input list="termo" data-regras="requerido"/>
+            </label>
+            <datalist id="termo">
+                <option value="Eu concordo"></option>
+            </datalist>
+			<br>
+			<label> 
+				<input type = "submit" value = "Cadastrar" class = "cadastro"/>
+			</label>
+		</form>
+	</div>
+	<script src="../js/forms.js"></script>
+</body>
+</html>

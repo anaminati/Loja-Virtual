@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>Paper Dreams</title>
+	<link rel="icon" type="image/png" href="../img/icon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=DM+Serif+Text&family=Outfit:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+	<header class="header-01">
+		<div class="center">
+
+			<!-- Logo -->
+
+			<div class="logo"><img src="../img/logo.png"></div>
+
+			<!-- Menu -->
+
+			<div class="menu-01">
+				<a href="index.html">Home</a>
+				<a href="login.html">Loja</a>
+				<a href="contato.html">Contato</a>
+				<a href="ajuda.html">Ajuda</a>
+			</div>
+		</div>
+	</header>
+
+	<h1 class="sobre">Login</h1>
+
+	<!-- Login -->
+
+	<p id="subtitulo">Faça seu login!</p>
+
+	<div class = "tela">	
+		<form method = "POST" action = "loja.html" class = "validador">
+			<label>
+				<p> e-mail: </p>
+			<input type = "text" name = "e-mail" data-regras = "requerido|email"/>
+			</label>
+			<br>
+			<label>
+				<p> Senha: </p>
+				<input type = "password" name = "senha" data-regras = "requerido|min=6" id = "senha"/>
+			</label>
+			<label> 
+				<input type = "submit" value = "Entrar" class = "cadastro"/>
+			</label>
+			<label style="margin-top: 30px; text-align: center;">
+				<p>Novo por aqui? <a href="cadastro.html">Crie uma conta</a>!</p>
+			</label>
+		</form>
+	</div>
+	<script src="../js/forms.js"></script>
+</body>
+</html>
